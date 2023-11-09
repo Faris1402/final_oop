@@ -1,0 +1,246 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+        <title>Uni Search</title>
+
+        <!--CSS DESIGN-->
+        <style>
+            *{
+                margin:0;
+                font-family: 'Arial', sans-serif; 
+            }
+
+            body{
+                background-color:grey;
+                overflow-x: hidden;
+            }
+
+            nav{
+                width:auto;
+                height:70px;
+                background-color: cyan;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .logo{
+                margin-top: 15px;
+                float:left;
+                font-size: 20px;
+                text-shadow: 4px 4px 4px  rgba(0,0,0,0.2);
+                color:red;
+            }
+
+            .nav-button{
+                margin-top: 15px;
+                margin-right: 50px;
+                float:right;
+                font-size: 20px;
+            }
+
+            .nav-button a {
+                font-size: 20px;
+                text-shadow: 4px 4px 4px  rgba(0,0,0,0.2);
+                color:#FBF3F2;
+                padding:10px;
+            }
+
+            .exit{
+                width:50px; 
+                height:50px; 
+                cursor: pointer; 
+                position: absolute;
+                top:10px;
+                margin-left:15px;
+            }
+
+            .pic{
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                margin-bottom: 30px;
+            }
+
+            .dark{
+                z-index: 1;
+                position: absolute;
+                top:70px;
+                width: 1518px;
+                height: 707px;
+                background-color: white;
+                opacity: 0.2;
+            }
+
+            .main-title{
+                z-index: 2;
+                font-size: 30px;
+                color:#FBF3F2;
+                text-shadow: 4px 4px 4px  rgba(0,0,0,0.2);
+                position: absolute;
+                border:black;
+                outline: solid 10px cyan;
+                top:300px;
+                left:50px;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            h2{
+                font-size: 50px;
+                color:cyan;
+            }
+
+            hr{
+                border: 5px solid cyan;
+                border-radius: 4px;
+                width: 50px;
+            }
+
+            .form0{
+                background-color: white;
+                padding:40px;
+                width: 500px;
+                height: 180px;
+                border-radius: 40px;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                margin-bottom: 30px;
+            }
+
+            label{
+                font-size: 30px;
+                color:cyan;
+                padding-right: 15px;
+                padding-top: 15px;
+            }
+
+            select{
+                height:40px;
+                width:200px;
+                border: 2px solid cyan;
+                border-radius: 5px;
+                font-size: large;
+            }
+
+            select:focus{
+                border:3px solid cyan;
+            }
+
+            .one{
+                font-size: 30px;
+                color:cyan;
+                margin-right: 95px;
+            }
+
+            input{
+                height:40px;
+                width:200px;
+                border: 2px solid cyan;
+                border-radius: 5px;
+                font-size: large;
+            }
+
+            input:focus{
+                border:3px solid cyan;
+            }
+
+            .submit{
+                margin-top: 30px;
+                cursor: pointer;
+                color:white;
+                background-color: cyan;
+                border:cyan;
+                border-radius: 10px;
+                padding:10px;
+                width: 150px;
+            }
+
+            .submit:hover{
+                background-color: cyan;
+                border:cyan;
+            }
+
+            .title-2 hr{
+                border: 5px solid cyan;
+                border-radius: 4px;
+                width: 70px;
+            }
+
+            .cover-box{
+                background-color: white;
+                padding:40px;
+                width: 800px;
+                height: 380px;
+                border-radius: 40px;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                margin-bottom: 30px;
+            }
+
+            table {
+                border-collapse: collapse;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                width: 800px;
+                border-radius: 10px;
+            }
+
+            td {
+                border: #f4f4f6 2px solid;
+                padding: 20px;
+            }
+
+            tr:nth-child(odd){
+                background-color: cyan;
+                color:white;
+                text-align: center;
+            }
+
+            tr:nth-child(even){
+                background-color: cyan;
+                color:white;
+                text-align: center;
+            }
+
+            .top{
+                font-style: thin;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!--NAVIGATION-->
+        <nav>
+            <div class="logo">
+                <p>Makeup Mania</p>
+            </div>
+            
+            <div class="nav-button">
+                <a href="index.html" style="color:#e0cac8;">Home</a>
+                <a href="favourite.html">Favourite</a>
+                <a href="#" onclick="self.close();"><img src="close.png" class="exit"></a>
+            </div>
+        </nav>
+        <br>
+        <br>
+        <!--MAIN FORM-->
+        <div align="center">
+            <div class="form0" align="center">
+                <label>Makeup Brand: </label>
+                <input type="text" id="makeup_input" placeholder="Enter makeup brand:" />
+                <label class="one">Type: </label>
+                <input type="text" id="type_input" placeholder="Enter makeup type:" />
+                <button type="button" onclick="buttonClicked()">Enter</button>
+            <script src = "function.js"></script>
+        </div>
+
+        <!--MAIN TITLE FOR RESULTS-->
+            <h2>Results</h2>
+            <hr>
+            <br>
+            <br>
+            <div id="image-container">
+
+            <p id="display"></p>
+        </div>  
+    </body>
+</html>
